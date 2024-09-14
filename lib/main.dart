@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:langapp/pages/home_page.dart';
 
 void main() {
   runApp(const LangApp());
@@ -9,12 +10,8 @@ class LangApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Language App'),
-        ),
-      ),
+    return const MaterialApp(
+      home: HomePage(),
     );
   }
 }
