@@ -6,33 +6,36 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xff010024),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 100,
-          ),
-          Text(
-            'Language App',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
+      body: Container(
+        margin: const EdgeInsets.only(left: 18),
+        child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 100,
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            'this app to learn some word in another language',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
+            Text(
+              'Language App',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+              ),
             ),
-          ),
-          CategoriesLang()
-        ],
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'this app to learn some word in another language',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+              ),
+            ),
+            CategoriesLang()
+          ],
+        ),
       ),
     );
   }
