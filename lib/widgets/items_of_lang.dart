@@ -11,7 +11,7 @@ class ItemsOfLang extends StatelessWidget {
   final double height, width;
   final String Name;
   final int color;
-  final void Function()? onTap;
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

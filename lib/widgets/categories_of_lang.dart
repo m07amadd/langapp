@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:langapp/pages/number_page.dart';
 import 'package:langapp/widgets/items_of_lang.dart';
 
 class CategoriesLang extends StatelessWidget {
@@ -8,7 +9,7 @@ class CategoriesLang extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         const SizedBox(
           height: 100,
@@ -21,15 +22,40 @@ class CategoriesLang extends StatelessWidget {
           child: Row(
             children: [
               ItemsOfLang(
-                  height: 150, width: 120, Name: 'Numbers', color: 0xff13C8FF),
+                height: 150,
+                width: 120,
+                Name: 'Numbers',
+                color: 0xff13C8FF,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return NumberPage();
+                      },
+                    ),
+                  );
+                },
+              ),
               const SizedBox(
                 width: 50,
               ),
               ItemsOfLang(
-                  height: 150,
-                  width: 120,
-                  Name: 'Family Members',
-                  color: 0xff39C75B),
+                height: 150,
+                width: 120,
+                Name: 'Family Members',
+                color: 0xff39C75B,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return NumberPage();
+                      },
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
@@ -43,14 +69,40 @@ class CategoriesLang extends StatelessWidget {
           child: Row(
             children: [
               ItemsOfLang(
-                  height: 150, width: 120, Name: 'colors', color: 0xffD4A901, onTap: () { 
-                    Navigator.push(context, route)
-                   },),
+                height: 150,
+                width: 120,
+                Name: 'colors',
+                color: 0xffD4A901,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return NumberPage();
+                      },
+                    ),
+                  );
+                },
+              ),
               const SizedBox(
                 width: 50,
               ),
               ItemsOfLang(
-                  height: 150, width: 120, Name: 'Phrases', color: 0xff8F36E8),
+                height: 150,
+                width: 120,
+                Name: 'Phrases',
+                color: 0xff8F36E8,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return NumberPage();
+                      },
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
