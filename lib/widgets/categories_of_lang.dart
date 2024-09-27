@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:langapp/pages/color_page.dart';
+import 'package:langapp/pages/members_page.dart';
 import 'package:langapp/pages/number_page.dart';
 import 'package:langapp/widgets/items_of_lang.dart';
 
@@ -50,7 +52,7 @@ class CategoriesLang extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return NumberPage();
+                        return MembersPage();
                       },
                     ),
                   );
@@ -78,7 +80,7 @@ class CategoriesLang extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return NumberPage();
+                        return ColorPage();
                       },
                     ),
                   );

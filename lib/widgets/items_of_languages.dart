@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:langapp/models/item_model.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class ItemsOfNumbers extends StatelessWidget {
-  const ItemsOfNumbers({super.key, required this.item});
+class ItemsOfLanguages extends StatelessWidget {
+  const ItemsOfLanguages({super.key, required this.item});
 
   final ItemModel item;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xff13C8FF),
+      color: Color(item.color),
       child: Row(
         children: [
           Container(
             height: 100,
-            color: Color(item.color),
+            color: Color(0xffFFF4DB),
             child: Image.asset(item.image),
           ),
           Container(
@@ -40,10 +40,9 @@ class ItemsOfNumbers extends StatelessWidget {
             flex: 12,
           ),
           GestureDetector(
-            onTap: () async {
+            onTap: () {
               final player = AudioPlayer();
-              await player
-                  .play(AssetSource('sounds/numbers/number_one_sound.mp3'));
+              player.play(AssetSource(item.Sound));
             },
             child: const Icon(
               Icons.play_arrow,
