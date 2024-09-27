@@ -1,8 +1,60 @@
 import 'package:flutter/material.dart';
+import 'package:langapp/models/item_model.dart';
 import 'package:langapp/widgets/items_of_numbers.dart';
 
 class NumberPage extends StatelessWidget {
-  const NumberPage({super.key});
+  NumberPage({super.key});
+
+  late List<ItemModel> NumberLiST = [
+    ItemModel(0xffFFF4DB,
+        image: 'assets/images/numbers/number_one.png',
+        engName: 'One',
+        jpName: 'ichi'),
+    ItemModel(0xffFFF4DB,
+        image: 'assets/images/numbers/number_one.png',
+        engName: 'One',
+        jpName: 'ichi'),
+    ItemModel(0xffFFF4DB,
+        image: 'assets/images/numbers/number_one.png',
+        engName: 'One',
+        jpName: 'ichi'),
+    ItemModel(
+      0xffFFF4DB,
+      image: 'assets/images/numbers/number_one.png',
+      engName: 'One',
+      jpName: 'ichi',
+    ),
+    ItemModel(
+      0xffFFF4DB,
+      image: 'assets/images/numbers/number_one.png',
+      engName: 'One',
+      jpName: 'ichi',
+    ),
+    ItemModel(
+      0xffFFF4DB,
+      image: 'assets/images/numbers/number_one.png',
+      engName: 'One',
+      jpName: 'ichi',
+    ),
+    ItemModel(
+      0xffFFF4DB,
+      image: 'assets/images/numbers/number_one.png',
+      engName: 'One',
+      jpName: 'ichi',
+    ),
+    ItemModel(0xffFFF4DB,
+        image: 'assets/images/numbers/number_one.png',
+        engName: 'One',
+        jpName: 'ichi'),
+    ItemModel(0xffFFF4DB,
+        image: 'assets/images/numbers/number_one.png',
+        engName: 'One',
+        jpName: 'ichi'),
+    ItemModel(0xffFFF4DB,
+        image: 'assets/images/numbers/number_one.png',
+        engName: 'One',
+        jpName: 'ichi'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +71,12 @@ class NumberPage extends StatelessWidget {
             ),
           ),
         ),
-        body: ListView(
-          children: [],
-        ));
+        body: ListView.builder(
+            itemCount: NumberLiST.length,
+            itemBuilder: (context, index) {
+              return ItemsOfNumbers(
+                item: NumberLiST[index],
+              );
+            }));
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:langapp/models/item_model.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class ItemsOfNumbers extends StatelessWidget {
   const ItemsOfNumbers({super.key, required this.item});
@@ -18,14 +19,18 @@ class ItemsOfNumbers extends StatelessWidget {
             child: Image.asset(item.image),
           ),
           Container(
-            height: 50,
-            child: const Padding(
+            height: 80,
+            child: Padding(
               padding: EdgeInsets.only(left: 12),
               child: Column(
                 children: [
-                  Text(),
+                  Text(
+                    item.jpName,
+                    style: TextStyle(fontSize: 20),
+                  ),
                   Text(
                     item.engName,
+                    style: TextStyle(fontSize: 20),
                   ),
                 ],
               ),
@@ -34,8 +39,15 @@ class ItemsOfNumbers extends StatelessWidget {
           const Spacer(
             flex: 12,
           ),
-          const Icon(
-            Icons.play_arrow,
+          GestureDetector(
+            onTap: () async {
+              final player = AudioPlayer();
+              await player
+                  .play(AssetSource('sounds/numbers/number_one_sound.mp3'));
+            },
+            child: const Icon(
+              Icons.play_arrow,
+            ),
           ),
           const Spacer(
             flex: 1,
